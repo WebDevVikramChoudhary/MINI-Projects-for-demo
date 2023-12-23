@@ -1,0 +1,70 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #444444;
+}
+
+.p-img-1 {
+  background-image: url("https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg");
+  min-height: 100%;
+}
+
+.p-img-2 {
+  background-image: url("https://images.pexels.com/photos/35600/road-sun-rays-path.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  min-height: 400px;
+}
+
+.p-img-3 {
+  background-image: url("https://images.pexels.com/photos/131723/pexels-photo-131723.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+  min-height: 400px;
+}
+
+.p-img-1,
+.p-img-2,
+.p-img-3 {
+  position: relative;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /*that make it parallax */
+}
+
+.p-txt {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.p-txt .border {
+  background-color: #302019;
+  color: #d3d3d3;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+section {
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section-A,
+.section-C {
+  background-color: #90c08c;
+  color: #444444;
+}
+
+.section-B {
+  background-color: #3d2e27;
+  color: #d3d3d3;
+}

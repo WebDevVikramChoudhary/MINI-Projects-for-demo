@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans";
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eceff1;
+}
+
+.nav {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.nav li.nav_item {
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  text-align: center;
+}
+
+.nav li.nav_item a {
+  text-decoration: none;
+  padding: 20px 40px;
+  font-size: 24px;
+  font-weight: 200;
+  display: block;
+  text-transform: uppercase;
+  background: white;
+  color: #78909c;
+  transition: all 0.2s;
+}
+
+.nav li.nav_item a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #f48fb1;
+  animation: slide-out 300ms ease-in-out forwards;
+}
+
+.nav li.nav_item a:hover {
+  background: #f2f4f6; /* You can use a specific color value here */
+  color: #546e7a;
+}
+
+.nav li.nav_item a:hover:after {
+  animation: slide-in 300ms;
+}
+
+@keyframes slide-out {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: none;
+  }
+}

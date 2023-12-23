@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Information</title>
+    <!-- <script src="script.js"></script> -->
+  </head>
+  <body>
+    <h1>Enter Student Information</h1>
+    <form id="studentForm">
+      <label for="student_id">Student ID:</label>
+      <input type="text" id="student_id" name="student_id" />
+      <button type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+  </body>
+  <script>
+    // Array to store student data
+    const students = [
+      { studentId: 1234, studentName: "John Doe", studentClass: "CS101" }
+      // Add more student data as needed
+    ];
+
+    const form = document.getElementById("studentForm");
+    const resultDiv = document.getElementById("result");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const studentId = document.getElementById("student_id").value;
+
+      const foundStudent = students.find(
+        (student) => student.studentId === parseInt(studentId)
+      );
+
+      if (foundStudent) {
+        resultDiv.innerHTML = `
+      <h2>Student Information</h2>
+      Student Name: ${foundStudent.studentName}<br>
+      Student Class: ${foundStudent.studentClass}<br>
+      Student ID: ${foundStudent.studentId}<br>
+    `;
+      } else {
+        resultDiv.innerHTML = "Student not found.";
+      }
+    });
+  </script>
+</html>
